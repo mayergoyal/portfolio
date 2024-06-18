@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MG portfolio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<style>
+    body {
+        background: url('MAYER (1).png');
+    }
+
+    .aboutme {
+        margin: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .aboutme h3 {
+        color: #907248;
+    }
+
+    .aboutme h4 {
+        color: #B89868;
+    }
+
+    .imgbd {
+        height: 100%;
+        width: 100%;
+        border-radius: 100%;
+        opacity: .7;
+        margin-top: 0;
+    }
+
+    .intro {
+        position: relative;
+        display: inline-block;
+    }
+
+    .aboutlit {
+        position: absolute;
+        top: 46%;
+        left: 52%;
+       max-width: 400px;
+        transform: translate(-50%, -50%);
+        color: #9C7A4F;
+        /* Change text color as needed */
+        /* Optional: Add background with some transparency for better readability */
+        
+        border-radius: 10px;
+    }
+
+    @import url("https://fonts.googleapis.com/css?family=Raleway:300");
+
+    $white: #f4f4f2;
+    $black: #1e1e1d;
+    $feature: #71cdf2;
+
+
+
+
+    .mainheading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Raleway", sans-serif;
+        padding: 2em;
+        text-align: center;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    h1 {
+        color: $feature;
+        font-size: 3.8rem;
+        margin-left: 27%;
+        text-transform: uppercase;
+        letter-spacing: 1rem;
+        color: #907248;
+
+
+
+        span {
+            animation: fadeIn 4s alternate infinite;
+            opacity: 0;
+        }
+
+
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            filter: blur(10px);
+        }
+
+        50%,
+        100% {
+            opacity: 1;
+            filter: blur(0px);
+        }
+    }
+
+    div.container {
+        font-family: Raleway;
+
+        padding-top: 35px;
+        padding-bottom: 15px;
+        ;
+        text-align: center;
+    }
+
+    div.container a {
+        color: #3F322C;
+        text-decoration: none;
+        font: 20px Raleway;
+        margin: 0px 10px;
+        padding: 10px 10px;
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+    }
+
+    /* Circle behind */
+    div.circleBehind a:before,
+    div.circleBehind a:after {
+        position: absolute;
+        top: 22px;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        border: 4px solid #3F322C;
+        transform: translateX(-50%) translateY(-50%) scale(0.8);
+        border-radius: 50%;
+        background: transparent;
+        content: "";
+        opacity: 0;
+        transition: all 0.3s;
+        z-index: -1;
+    }
+
+    div.circleBehind a:after {
+        border-width: 2px;
+        transition: all 0.4s;
+    }
+
+    div.circleBehind a:hover:before {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+
+    div.circleBehind a:hover:after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) scale(1.3);
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mainleft {
+        height: 100%;
+        width: 35%;
+    }
+
+    .aboutme {
+        height: 100%;
+        width: 25%;
+    }
+
+    .bookimg {
+        width: 100%;
+        height: 35rem;
+        opacity: .6;
+        border-radius: 80px;
+
+
+    }
+
+    a {
+        color: #000;
+        /* Change to the color you prefer */
+        text-decoration: none;
+        /* Optional: Removes underline */
+    }
+
+    .aboutlit {
+
+        font-weight: 200;
+        font-size: larger;
+        font-family: Georgia, 'Times New Roman', Times, serif
+    }
+
+    pre a {
+        width: max-content;
+    }
+
+    .experience {
+        display: none;
+        flex-direction: flex;
+
+
+        justify-content: space-between;
+
+
+    }
+
+    .firstrow {
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* .secondrow{
+        display: flex;
+        flex-direction: row;
+    }
+    .secondrow .card{
+         width: 50%;
+         height:400px;
+    }*/
+    .firstrow .card {
+        width: 50%;
+        height: 100%;
+    }
+
+
+    .card {
+        background-color: #c6a780;
+        width: 200px;
+        height: 200px;
+        font-size: .59rem;
+        margin: 9px;
+        display: row;
+    }
+
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        /* Set the desired height */
+        object-fit: cover;
+    }
+
+
+
+    .showhack {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .hackathons {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .coding {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .writer {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        background-color: #a8967e;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 8px;
+        row-gap: 5px;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        max-height: 800px;
+        max-width: 700px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        animation: fadeIn 0.3s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    .close2 {
+        color: #f50808;
+        float: left;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close2:hover,
+    .close2:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .close {
+        color: #f50808;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .close3 {
+        color: #f50808;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close3:hover,
+    .close3:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .close4 {
+        color: #f50808;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    .close4:hover,
+    .close4:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .ldl {
+        background: url("WhatsApp Image 2024-06-14 at 16.29.24_e9455d08.jpg");
+        background-size: cover;
+    }
+
+    .teamgreen {
+        background: url("WhatsApp Image 2024-06-15 at 02.26.18_b4fd1c10.jpg");
+        background-size: cover;
+
+    }
+
+    .socialcard {
+        height: 300px;
+        width: 300px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contentitem {
+        display: none;
+    }
+
+    .card:hover .contentitem {
+        display: block;
+
+        transform: translateY(-200px);
+        font-size: .85rem;
+        font-weight: bolder;
+
+    }
+
+    .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: inherit;
+        /* Inherits the background from the parent */
+        z-index: -1;
+        transition: filter 0.3s ease;
+    }
+
+    .card:hover::before {
+        filter: blur(5px);
+        /* Adjust the blur value as needed */
+    }
+
+    .contentitem {
+        position: relative;
+        z-index: 1;
+    }
+
+    .card:hover .card-img-top {
+        opacity: .3;
+    }
+
+    .newclassfordes {
+        transition: transform 3s ease;
+        transform: translateX(-600px);
+    }
+    
+
+    .newimageclass {
+        height: 80%;
+        width: 100%;
+        border-radius: 100%;
+
+        margin-top: 0;
+    }
+    /* 6 */
+.btn-6 {
+  background: rgb(70, 66, 57);
+background: radial-gradient(circle, #9c7a4f 0%, #545454 100%);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+.btn-6 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-6:before,
+.btn-6:after {
+  position: absolute;
+  content: "";
+  height: 0%;
+  width: 1px;
+ box-shadow:
+   -1px -1px 20px 0px rgb(220, 170, 20),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(181, 22, 22, 0.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6:before {
+  right: 0;
+  top: 0;
+  transition: all 500ms ease;
+}
+.btn-6:after {
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease;
+}
+.btn-6:hover{
+  background: transparent;
+  color: #76aef1;
+  box-shadow: none;
+}
+.btn-6:hover:before {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6:hover:after {
+  transition: all 500ms ease;
+  height: 100%;
+}
+.btn-6 span:before,
+.btn-6 span:after {
+  position: absolute;
+  content: "";
+  box-shadow:
+   -1px -1px 20px 0px rgba(255,255,255,1),
+   -4px -4px 5px 0px rgba(255,255,255,1),
+   7px 7px 20px 0px rgba(0,0,0,.4),
+   4px 4px 5px 0px rgba(0,0,0,.3);
+}
+.btn-6 span:before {
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:after {
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  height: .5px;
+  transition: all 500ms ease;
+}
+.btn-6 span:hover:before {
+  width: 100%;
+}
+.btn-6 span:hover:after {
+  width: 100%;
+}
+
+
+/* 3 */
+.btn-3 {
+  background: rgb(12, 11, 9);
+background: linear-gradient(0deg, #B68C57 0%, #806748 100%);
+  width: 130px;
+  height: 40px;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  
+}
+.btn-3 span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.btn-3:before,
+.btn-3:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+   background: #BF9157
+  transition: all 0.3s ease;
+}
+.btn-3:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-3:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3:hover{
+   background: transparent;
+  box-shadow: none;
+}
+.btn-3:hover:before {
+  height: 100%;
+}
+.btn-3:hover:after {
+  width: 100%;
+}
+.btn-3 span:hover{
+   color:#9C7A4F;
+}
+.btn-3 span:before,
+.btn-3 span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+   background: #DFB886;
+  transition: all 0.3s ease;
+}
+.btn-3 span:before {
+  width: 2px;
+  height: 0%;
+}
+.btn-3 span:after {
+  width: 0%;
+  height: 2px;
+}
+.btn-3 span:hover:before {
+  height: 100%;
+}
+.btn-3 span:hover:after {
+  width: 100%;
+}
+.contact{
+    display:none;
+    align-items: center;
+    background: url("contact.png");
+}
+
+
+</style>
+
+<body>
+    <div class="container blue circleBehind">
+        <a href="" onclick="aboutme(event)">ABOUT ME</a>
+        <a href="" onclick="work(event)">MY WORKS</a>
+        <a href="mayer ka resume technical.pdf" ref="mayer ka resume technical.pdf" onclick="download(event)"
+            id="resume">RESUME</a>
+        <a onclick="experience(event)">EXPERIENCE</a>
+        <a onclick="contactme(event)">CONTACT</a>
+        
+    </div>
+
+    <div class="mainheading">
+        <h1 class="fancy">Here's in my Sprint</h1>
+    </div>
+    <div class="main" id="mainhai">
+        <div class="mainleft">
+            <div class="intro">
+                <img src="book.png" alt="" class="bookimg">
+                <div class="aboutlit">
+                    <h2 style="margin-left: 80px; margin-bottom: 45px;">About me</h2>
+                    <ul>
+                        <li>Surfing on this tech-boat of Software and development.</li>
+                        <li>Aspiring to be an SDE surfer.</li>
+                        <li>Diving in sea of C++ and trying hands in the ocean of development.</li>
+                        <li>A Concolist, finding the gems of solutions in this problematic structure seashells.</li>
+                    </ul>
+
+                </div>
+            </div>
+            <div class="experience">
+                <div class="first row">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="trophy.png" alt="Card image cap">
+                        <div class="card-body">
+
+                            <div class="contentitem">
+                                <h4 class="card-title">Techathons</h4>
+                                <p class="card-text">Experienced various tech competitions and ideathon events
+                                    intercollege and
+                                    incollge </p>
+                                <a id="openbutton" class="btn btn-primary hackbutton"
+                                    onclick="openhackathons(event)">click to
+                                    know</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="code.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="contentitem">
+                                <h5 class="card-title">Coding-Sphere</h5>
+                                <p class="card-text">Working as a DSA programmer and hitting my whole best as an
+                                    aspiring SDE
+                                </p>
+                                <a id="openbutton" class="btn btn-primary codebutton" onclick="opencoding(event)">click
+                                    to
+                                    know</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="secondrow">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="MAYER (2).png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="contentitem">
+                                <h5 class="card-title">Catalysis for Change</h5>
+                                <p class="card-text">Working as a teaching volunteer and environmental activist in
+                                    discrete NGOs.
+                                </p>
+                                <a id="openbutton" class="btn btn-primary socialbutton">click to
+                                    know</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="writer.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="contentitem">
+                                <h5 class="card-title">Pen Work</h5>
+                                <p class="card-text">As a writer , along with personal work , I got various domain
+                                    writing responsiblities that gave me immense knowledge & work exposure
+                                </p>
+                                <a id="openbutton" class="btn btn-primary writerbutton">click to
+                                    know</a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="writer">
+                    <div class="modal-content">
+                        <span class="close4">&times;</span>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrcUGyIu0roJsOI0p7eIn853gQw231sBBCEQ&s"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <h5 class="card-title">BlueSoul</h5>
+                                    <p class="card-text">Created a platform where we produce content of simplification
+                                        of Geeta and spread spiritual consciousness</p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social">
+                    <div class="modal-content">
+                        <span class="close3">&times;</span>
+                        <div class="socialcard ldl">
+
+                            <h4>Light De Literacy</h4>
+                            <p>Working as a volunteer for the kids of backward area . Teaching them regularly and
+                                empowering them and their rights and trying to bring them in the mainstream.By investing
+                                in their education and personal development, I hope to create a ripple effect that will
+                                benefit not only the individual children but also their families and the wider
+                                community.</p>
+
+
+                        </div>
+
+
+
+                        <div class="socialcard teamgreen">
+
+                            <h4>Team Green</h4>
+                            <p style="color: aliceblue;">Working in the environment concerned community . Spreading
+                                awareness and building community with the aim of sustainable development. Our vision is
+                                to create a resilient community that values sustainability and works collectively
+                                towards a greener future. </p>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="coding">
+                    <div class="modal-content">
+                        <span class="close2">&times;</span>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="data:image/jpeg;base64,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"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <a href="https://www.geeksforgeeks.org/user/goyalmm87a/"
+                                        class="btn btn-primary codebutton">check me</a>
+
+                                </div>
+                                <h5 class="card-title">Geeks for Geeks</h5>
+
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="data:image/jpeg;base64,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"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <h5 class="card-title">Leet Code</h5>
+                                    <a href="https://leetcode.com/u/Mayer_Goyal123/ "
+                                        class="btn btn-primary codebutton">check me</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top"
+                                src="data:image/jpeg;base64,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"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <h5 class="card-title">Coding Ninjas</h5>
+                                    <a href="https://www.naukri.com/code360/profile/eae4b0b5-20e8-4eb2-a915-2d80b54213f1"
+                                        class="btn btn-primary codebutton">check me</a>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="hackathons">
+                    <div class="modal-content">
+
+
+                        <span class="close">&times;</span>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="Screenshot 2024-06-14 010339.png" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <h5 class="card-title">Optica Hackathon'23</h5>
+                                    <p class="card-text">Made the Website for the JSCOP event </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="Screenshot 2024-06-14 012350.png" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <h5 class="card-title">OSDC Hack'24</h5>
+                                    <p class="card-text">Made KrishiKonnect , a community and farmer empowering platform
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="Screenshot 2024-06-14 013228.png" alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <h5 class="card-title">Your story HackerEarth</h5>
+                                    <p class="card-text">Made Virtual teaching platform for gamifying the learninig
+                                        process
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <div class="card" style="width: 18rem;">
+                            <img class="card-img-top" src="WhatsApp Image 2024-06-14 at 01.53.51_95e80f65.jpg"
+                                alt="Card image cap">
+                            <div class="card-body">
+                                <div class="contentitem">
+                                    <h5 class="card-title">Brainathon</h5>
+                                    <p class="card-text">Gave a solution to the online trolling and cyberbullying </p>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="aboutme">
+            
+            <div class="description">
+                <img src="newm.jpeg" alt="" class="imgbd">
+                <div class="info">
+                    <h3 style="margin-left:40px">Mayer Goyal</h3>
+
+                </div>
+
+
+            </div>
+            <div class="contact">
+                <h3 class="contactheading" style="margin:20px;">
+                      CONTACT ME 
+                </h3>
+                <button class="custom-btn btn-6" style="margin:15px;"><span> <a href="tel:7017815075">7017815075</a></span></button>
+                <button class="custom-btn btn-6" style="margin:15px;"><span><a href="mailto:goyalmayer2@gmail.com">GOYALMAYER2@GMAIL.COM</a></span></button>
+                <h4 style="margin:20px;">Through platforms :- </h4>
+                <button class="custom-btn btn-3" style="margin:15px;"><span><a href="https://www.linkedin.com/in/mayer-goyal-07a58527a/"> LinkedIn <i class="fa-brands fa-linkedin"></i> </a>   </span></button>
+                <button class="custom-btn btn-3" style="margin:15px;"><span> <a href="https://github.com/mayergoyal">Github <i class="fa-brands fa-github"></i></a> </span></button>
+                
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+       var globalexperience = document.querySelector(".experience");
+        var globalhackathons = document.querySelector(".hackathons");
+        var globalcoding = document.querySelector(".coding");
+        var codebutton = document.querySelector(".codebutton");
+        var socialbutton = document.querySelector(".socialbutton");
+        var globalsocial = document.querySelector(".social");
+        var globalwriter = document.querySelector(".writer");
+        var writerbutton = document.querySelector(".writerbutton");
+        var globalaboutme = document.querySelector(".aboutme");
+        var globaldescription = document.querySelector(".description");
+        var c = 0;
+
+        function contactme(event) {
+            c = 1;
+            let contactdetails=document.querySelector(".contact");
+            contactdetails.style.display="flex";
+            contactdetails.style.flexDirection="column";
+            
+            var left = document.querySelector(".mainleft");
+            left.innerHTML = "";
+            let ele = document.querySelector(".description");
+            ele.style.transition ="transform 1s ease";
+            ele.style.transform="translate(-600px)";  
+            let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
+            if (image) {
+                image.src = 'WhatsApp Image 2024-06-18 at 00.46.45_749f2b4a.jpg';
+                image.alt = '';
+                image.classList.toggle("newimageclass");
+                image.style.borderRadius = "100%";
+                image.style.opacity = "1";
+                console.log("sahi h sab");
+            }
+            else {
+                console.error("gadbad hai image m");
+            }
+            contactdetails.style.transition = "transform 1s ease";
+    contactdetails.style.transform = "translateY(-500px)";
+
+        }
+        writerbutton.onclick = function () {
+            globalwriter.style.display = "flex";
+        }
+
+        socialbutton.onclick = function () {
+            globalsocial.style.display = "flex";
+        }
+
+        codebutton.onclick = function () {
+            globalcoding.style.display = "flex";
+        }
+        var fancyHeading = document.getElementsByClassName('fancy')[0];
+        var buttonhack = document.querySelector(".hackbutton");
+        buttonhack.onclick = function () {
+            globalhackathons.style.display = "flex";
+            globalhackathons.style.flexDirection = "row"; // Use camelCase for hyphenated CSS properties
+            globalhackathons.style.flexWrap = "wrap";
+
+        }
+        const span = document.getElementsByClassName('close')[0];
+        const span2 = document.getElementsByClassName('close2')[0];
+        const span3 = document.getElementsByClassName('close3')[0];
+        const span4 = document.getElementsByClassName('close4')[0];
+        var letters = fancyHeading.textContent.split('');
+
+        var content = letters.map((val, i) => {
+            let delay = Math.floor((Math.random() * 1000) + 1);
+            return ('<span style="animation-delay: ' + delay + 'ms">'
+                + val +
+                '</span>');
+        });
+
+        fancyHeading.innerHTML = "";
+
+        for (var i = 0; i < content.length; i++) {
+            fancyHeading.innerHTML += content[i];
+        }
+        var globalmainleft = document.querySelector(".mainleft");
+        var globalintro = document.querySelector(".intro");
+
+        span.onclick = function () {
+            globalhackathons.style.display = 'none';
+        }
+        span2.onclick = function () {
+            globalcoding.style.display = 'none';
+        }
+        span3.onclick = function () {
+            globalsocial.style.display = 'none';
+        }
+        span4.onclick = function () {
+            globalwriter.style.display = 'none';
+        }
+
+
+        function experience(event) {
+            let contactdetails=document.querySelector(".contact");
+            contactdetails.style.display="none";
+            let element = globalmainleft;
+            if (element) {
+                element.innerHTML = "";
+                let ref = globalexperience;
+                ref.style.display = "flex";
+                element.appendChild(ref);
+
+            }
+            else {
+                console.error("main left is no more ");
+            }
+            if (c != 0) {
+                c=0;
+                let ele = document.querySelector(".description");
+            ele.style.transition ="transform 2s ease";
+            ele.style.transform="translateX(60px)";                                                         // transition: transform 2s ease;
+          //  transform: translateX(60px);
+
+                let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
+                if (image) {
+                    image.src = 'newm.jpeg';
+                    image.alt = '';
+                  
+                    image.style.borderRadius = "100%";
+                    image.style.opacity = ".7";
+                    console.log("sahi h sab");
+                }
+                else {
+                    console.error("gadbad hai image m");
+                }
+
+            }
+        }
+        function work(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            let contactdetails=document.querySelector(".contact");
+            contactdetails.style.display="none";
+            // Perform custom actions
+            let element = globalmainleft;
+
+            if (element) {
+                element.innerHTML = ""; // Clear the existing content
+                element.innerHTML = "<img src='myworks.png' class='imge' alt='My Works'>";
+                let newo = document.querySelector(".imge");
+                if (newo) {
+                    newo.style.height = "100%";
+                    newo.style.width = "100%";
+                    // newo.style.border-radius= "70%"; // Assuming you meant to set the width here
+                } else {
+                    console.error("Image element not found");
+                }
+                // Add new content
+            } else {
+                console.error("Element with class 'mainleft' not found");
+            }
+            if (c != 0) {
+                c=0;
+                let ele = document.querySelector(".description");
+            ele.style.transition ="transform 2s ease";
+            ele.style.transform="translateX(60px)";                                                         // transition: transform 2s ease;
+          //  transform: translateX(60px);
+
+                let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
+                if (image) {
+                    image.src = 'newm.jpeg';
+                    image.alt = '';
+                  
+                    image.style.borderRadius = "100%";
+                    image.style.opacity = ".7";
+                    console.log("sahi h sab");
+                }
+                else {
+                    console.error("gadbad hai image m");
+                }
+
+            }
+
+        }
+        function download(event) {
+            let ans = confirm("Wanna download my resume?");
+            if (ans) {
+                let res = document.createElement('a');
+                res.href = 'mayer ka resume technical.pdf';
+                res.download = 'mayer ka resume technical.pdf';
+                document.body.appendChild(res);
+                res.click();
+                document.body.removeChild(res);
+            }
+        }
+        function aboutme(event) {
+            event.preventDefault(); // Prevent the default link behavior if applicable
+            let contactdetails=document.querySelector(".contact");
+            contactdetails.style.display="none";
+            let element = globalmainleft;
+            if (element) {
+                let about = globalintro;
+                if (about) {
+                    let aboutClone = about.cloneNode(true); // Clone the intro element
+                    element.innerHTML = ""; // Clear the existing content
+                    element.appendChild(aboutClone); // Append the cloned element
+                } else {
+                    console.error("Element with class 'intro' not found");
+                }
+            } else {
+                console.error("Element with class 'mainleft' not found");
+            }
+            if (c != 0) {
+                c=0;
+                let ele = document.querySelector(".description");
+            ele.style.transition ="transform 2s ease";
+            ele.style.transform="translateX(60px)";                                                         // transition: transform 2s ease;
+          //  transform: translateX(60px);
+
+                let image = document.querySelector(".imgbd "); // Assuming .imgbd contains an img element
+                if (image) {
+                    image.src = 'newm.jpeg';
+                    image.alt = '';
+                  
+                    image.style.borderRadius = "100%";
+                    image.style.opacity = ".7";
+                    console.log("sahi h sab");
+                }
+                else {
+                    console.error("gadbad hai image m");
+                }
+
+            }
+        }
+       
+
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script
+</body>
+</html>
